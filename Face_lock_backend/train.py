@@ -6,7 +6,7 @@ import os
 path = 'Assitant\static\Samples'
 
 recognizer = cv2.face.LBPHFaceRecognizer_create()
-detector = cv2.CascadeClassifier("Assitant\static\Files\haarcascade_frontalface_default.xml")
+detector = cv2.CascadeClassifier("Face_lock_backend/haarcascade_frontalface_default.xml")
 
 def Images_And_Labels(path):
     imagePaths = [os.path.join(path, f) for f in os.listdir(path)]
@@ -32,6 +32,6 @@ if __name__ == "__main__":
     faces, ids = Images_And_Labels(path)
     recognizer.train(faces, np.array(ids))
     
-    recognizer.write(r'Assitant\static\Files\trainer.yml')
+    recognizer.write(r'Face_lock_backend/trainer.yml')
 
     print("Model trained, Now we can recognize your face.")
