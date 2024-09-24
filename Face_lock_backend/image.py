@@ -5,7 +5,7 @@ def capture_samples():
     cam.set(3, 640)
     cam.set(4, 480)
 
-    detector = cv2.CascadeClassifier('Face_lock_backend/trainer.yml')
+    detector = cv2.CascadeClassifier('Face_lock_backend/haarcascade_frontalface_default.xml')
 
     face_id = input("Enter a Numeric user ID here: ")
     print("Taking samples, look at the camera ....... ")
