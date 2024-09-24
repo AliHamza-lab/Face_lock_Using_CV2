@@ -1,8 +1,8 @@
 import cv2
 
 recognizer = cv2.face.LBPHFaceRecognizer_create() # Local Binary Patterns Histograms
-recognizer.read(r'Assitant\static\Files\trainer.yml')   #load trained model
-cascadePath = r"Assitant\static\Files\haarcascade_frontalface_default.xml"
+recognizer.read(r'Face_lock_backend/trainer.yml')   #load trained model
+cascadePath = r"Face_lock_backend/haarcascade_frontalface_default.xml"
 faceCascade = cv2.CascadeClassifier(cascadePath) #initializing haar cascade for object detection approach
 
 font = cv2.FONT_HERSHEY_SIMPLEX #denotes the font type
